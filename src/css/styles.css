@@ -19,7 +19,7 @@ html, body {
 .navbar {
     background-color: #101010;
     overflow: hidden;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .navbar a {

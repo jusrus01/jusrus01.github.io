@@ -14,7 +14,10 @@ function stickNavbarToTop() {
     if(window.pageYOffset >= navOffset) {
         navbar.classList.add('sticky');
     } else {
-        navbar.classList.remove('sticky');
+        // don't remove if navbar is open
+        if(!navbar.classList.contains("responsive")) {
+            navbar.classList.remove('sticky');
+        }
     }
 }
 
