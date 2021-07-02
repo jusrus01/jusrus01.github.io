@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.skill-container {
+    width: 100%;
+    background-color: #101010;
+    border-radius: 25px;
+}
+
+.skills {
+    text-align: right; /* Right-align text */
+    padding-top: 6px; /* Add top padding */
+    padding-bottom: 6px; /* Add bottom padding */
+    font-style: italic;
+    color: white; /* White text color */
+}
+  
+.html {width: 70%; background-color: orangered; border-radius: 25px;}
+.css {width: 50%; background-color: coral;  border-radius: 25px;} 
+.js {width: 50%; background-color: coral; border-radius: 25px;} 
+.net {width: 80%; background-color: orangered; border-radius: 25px;} 
+.cplusplus {width: 45%; background-color: lightsalmon; border-radius: 25px;}
+.angular {width: 60%; background-color: #D2691E; border-radius: 25px;} 
+.java {width: 50%; background-color: coral; border-radius: 25px;}
+.python {width: 60%; background-color: #D2691E; border-radius: 25px;}

@@ -1,0 +1,13 @@
+.front-container:hover .space-text, .star {
+    animation-play-state: running;
+}
+
+@keyframes space-text {
+    0% {
+        transform: rotate(-1deg) translateY(0);
+    }
+
+    100% {
+        transform:  rotate(1deg) translateY(3%);
+    }
+}

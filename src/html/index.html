@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JR | Portfolio website</title>
+
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <link rel="stylesheet" href="../css/levels.css">
+    </head>
+
+    <body>
+
+        <div class="front-container">
+            <img class="bg-image" src="../../assets/blackHole.gif" alt="">
+            
+            <div class="introduction">
+                <h1 class="white-text space-text">Hi,</h1>
+                <h1 class="white-text space-text">I'm Justin!</h1>
+                <p class="white-text space-text">Kaunas University of Technology student, learning web development!</p>
+            </div>
+        </div>
+        
+        <!-- Navigation bar -->
+        <div class="navbar" id="navbar">
+            <a class="nav-logo" href="#">&#9786;</a>
+            <a class="nav-contact" href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="showNavbarItems()">
+                <i>Press to see hidden contents</i>
+            </a>
+        </div>
+
+        <div class="container">
+            <h2>About me</h2>
+            <div class="about-me">
+                <img class="profile-image" src="../../assets/profile.jpg" alt="">
+                <p class="about-me-text">Hello. I'm 20 year old student from Lithuania. I am interested in
+                    psychology, art and computer science. Currently I'm a second year student at Kaunas University of Technology
+                    studying software engineering. I don't have any industry experience, but I do have some projects to show
+                    my current capabilities (though I'll keep getting better). If you have any work please contact me!
+                </p>
+            </div>
+            <br>
+            <div class="skills-container">
+                <h2>Skills</h2>
+                <table class="skills-table" width=100%>
+                    <tr>
+                        <td width=50%>
+                            <p>C# with .NET Core</p>
+                            <div class="skill-container">
+                                <div class="skills net">80%</div>
+                            </div>
+                            
+                            <p>HTML</p>
+                            <div class="skill-container">
+                                <div class="skills html">70%</div>
+                            </div>
+                            
+                            <p>Angular</p>
+                            <div class="skill-container">
+                                <div class="skills angular">60%</div>
+                            </div>
+                
+                            <p>Python</p>
+                            <div class="skill-container">
+                                <div class="skills python">60%</div>
+                            </div>
+                        </td>
+                        
+                        <td width=50%>
+                            <p>Java</p>
+                            <div class="skill-container">
+                                <div class="skills java">50%</div>
+                            </div>
+                
+                            <p>CSS</p>
+                            <div class="skill-container">
+                                <div class="skills css">50%</div>
+                            </div>
+                
+                            <p>Javascript / Typescript</p>
+                            <div class="skill-container">
+                                <div class="skills js">50%</div>
+                            </div>
+                
+                            <p>C++</p>
+                            <div class="skill-container">
+                                <div class="skills cplusplus">45%</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+
+            <br><br>
+
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Web application to store movies</h3>
+                <h4>Description</h4>
+                <p>Simple web application to store and rate movies.</p>
+                <a class="btn gitBtn" href="https://github.com/jusrus01/PersonalMovieList">View in GitHub</a>
+            </div>
+            <br>
+            <div class="project">
+                <h3>Chat room web application</h3>
+                <h4>Description</h4>
+                <p>Simple chat room web application to learn how web socket programming works in .net core. </p>
+                <a class="btn gitBtn" href="https://github.com/jusrus01/ChatRoomNetCoreWebSockets">View in GitHub</a>
+            </div>
+            <br>
+            <div class="project">
+                <h3>Video tracker</h3>
+                <h4>Description</h4>
+                <p>Remake of another video tracker program I've made. I used LibVLCSharp and WPF a UI framework that creates desktop client applications.</p>
+                <a class="btn gitBtn" href="https://github.com/jusrus01/VideoTracker-v2">View in GitHub</a>
+            </div>
+            <br>
+            <hr>
+    
+            <div id="contact">
+                <form action="mailto:test@test.com" method="POST" enctype="text/plain" id="mailTo">
+                    <h2>Contact</h2>
+            
+                    <label>Subject</label>
+                    <input type="text" name="subject" id="subject" maxlength="100">
+                        
+                    <label>Message</label>
+                    <textarea type="text" name="body" id="messageBody" maxlength="3000"></textarea>
+                    <input class="btn" type="submit" value="Send" id="contactBtn" onclick="fillInMailToFields()"/>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>@ 2021</p>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
