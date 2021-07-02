@@ -1,8 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
     background-color: black;
-    margin: 0;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
 /* Navigation bar styles */
@@ -71,25 +81,38 @@ body {
     }
   }
   
+/* Introduction container styles  */
 .front-container {
-    background-color: black;
+    background-color: blue;
+    height: 100%;
     
-    width: 100%;
-    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer {
-    width: 100%;
-    color: gray;
+.temp {
     text-align: center;
-    overflow: hidden;
 }
 
-.introduction {
-    margin-left: 25%;
-    padding: 10% 5% 10% 0%;
+.introduction--wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
+.introduction-section {
+    padding: 0 5%;
+}
+
+.bg-image {
+    position: absolute;
+    width: 100%;
+    object-fit: fill;
+}
+
+
+/* Text styles */
 .white-text {
     color: white;
 }
@@ -99,17 +122,12 @@ body {
     animation-play-state: paused;
 }
 
-.bg-image {
-    position: absolute;
-
-    width: 100%;
-    height: 800px;
-}
-
+/* Main container styles */
 .container {
     margin: 10% 8% 2% 8%;
 }
 
+/* About me section styles*/
 .profile-image {
     float: left;
     width: 260px;
@@ -128,6 +146,7 @@ body {
     line-height: 1.5;
 }
 
+/* Skills section styles */
 .skills-container {
     margin-top: 4%;
     width: 100%;
@@ -149,6 +168,7 @@ body {
     margin-bottom: 0;
 }
 
+/* Projects section styles*/
 .project {
     background-color: #101010;
     padding: 1.5%;
@@ -165,6 +185,7 @@ body {
     max-width: 80%
 }
 
+/* Contact section styles */
 input, select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
@@ -176,7 +197,10 @@ input, select, textarea {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
 
-  /* Style the submit button with a specific background color etc */
+
+/* Button styles */
+
+/* Style the submit button with a specific background color etc */
 .btn {
     background-color: #04AA6D;
     color: white;
@@ -198,3 +222,13 @@ input, select, textarea {
     width: 150px;
     float: right;
 }
+
+/* Footer */
+.footer {
+    width: 100%;
+    color: gray;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Utility styles */
