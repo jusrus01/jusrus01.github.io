@@ -23,7 +23,19 @@ function showNavbarItems() {
     if(navbar.classList.contains("responsive")) {
         navbar.classList.remove("responsive");
     } else {
+
+        if(!navbar.classList.contains("sticky")) {
+            navbar.classList.add("sticky");
+        }
+
         navbar.classList.add("responsive");
+    }
+}
+
+function closeNavbarItems() {
+
+    if(navbar.classList.contains('responsive')) {
+        showNavbarItems();
     }
 }
 
