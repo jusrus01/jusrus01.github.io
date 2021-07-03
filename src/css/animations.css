@@ -4,10 +4,37 @@
 
 @keyframes space-text {
     0% {
-        transform: rotate(-1deg) translateY(0);
+        transform: rotate(-1deg) translateY(-2%);
     }
 
     100% {
-        transform:  rotate(1deg) translateY(3%);
+        transform:  rotate(2deg) translateY(3%);
+    }
+}
+
+.play-animation {
+    animation-play-state: running;
+}
+
+.reset-animation {
+    animation-play-state: initial;
+}
+
+/* Project animation */
+.project-hover-animation {
+    transition: transform 0.5s linear;
+}
+
+.project-spawn-animation {
+    transition: spawn-animation 2s ease-in;
+}
+
+@keyframes spawn-animation {
+    0% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(100%);
     }
 }
