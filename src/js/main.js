@@ -42,33 +42,39 @@ function closeNavbarItems() {
     }
 }
 
-// function fillInMailToFields() {
+function openMail() {
+    
+    const subjectInput = document.getElementById('subject').value;
+    const bodyInput = document.getElementById('messageBody').value;
+    
+    if(subjectInput != '' && bodyInput != '') {
 
-//     const subject = document.getElementById('subject');
-//     const body = document.getElementById('messageBody');
-//     const mailForm = document.getElementById('mailTo');
+        if(isValidString(subjectInput) && isValidString(bodyInput)) {
+            // open mail with filled in fields
+            window.location.href = "mailto:user@example.com?subject=" +
+            subjectInput + "&body=" + bodyInput;
+            
+            // clear inputs
+            subjectInput = '';
+            bodyInput = '';
 
-//     mailForm.action += '?subject=' + subject.innerText +
-//         '&body=' + body.innerText;
+        } else {
+            // show error message
+            alert("Please use only english alphabet characters.");
+        }
+    } else {
+        // show error message
+        alert("Please fill in all fields.");
+    }
+}
 
-//     mailForm.submit();
+function isValidString(s) {
 
-//     subject.innerText = '';
-//     body.innerText = '';    
-// }
-
-// function addContactFormListeners() {
-//     const subject = document.getElementById('subject');
-//     const body = document.getElementById('messageBody');
-
-//     body.onkeydown = function() { onEnterPressButton(event, 'contactBtn') };
-//     subject.onkeydown = function() { onEnterPressButton(event, 'contactBtn') };
-// }
-
-// function onEnterPressButton(event, buttonId) {
-//     const btn = document.getElementById(buttonId);
-
-//     if(event.code == "Enter") {
-//         btn.click();
-//     }
-// }
+    for(var i = 0; i < s.length; i++) {
+        
+        if(s[i] < 32 || s[i] > 126) {
+            return false;
+        }
+    }
+    return true;
+}
