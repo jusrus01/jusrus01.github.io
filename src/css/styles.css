@@ -188,7 +188,6 @@ body {
 
 .project:hover {
     background-color: #070606;
-    transform: translateX(1%);
 }
 
 .project p {
