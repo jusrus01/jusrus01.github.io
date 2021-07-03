@@ -43,4 +43,13 @@
     }
 }
 
-/* Skill animation */
+/* About me */
+@keyframes simple-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}

@@ -140,6 +140,8 @@ body {
 .about-me {
     display: inline-block;
     padding-top: 2%;
+
+    animation: simple-fade 2s ease-in-out;
 }
 
 .about-me p {
