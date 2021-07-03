@@ -19,12 +19,21 @@
     font-style: italic;
     color: white; /* White text color */
 }
+
+.skill-level-loading {
+    width:0%;
+    overflow:hidden;
+    -webkit-transition: width 1.5s ease-in-out;
+    -moz-transition: width 1.5s ease-in-out;
+    -o-transition: width 1.5s ease-in-out;
+    transition: width 1.5s ease-in-out;
+}
   
-.html {width: 70%; background-color: var(--clr-level-400); border-radius: 25px;}
-.css {width: 50%; background-color: var(--clr-level-200);  border-radius: 25px;} 
-.js {width: 60%; background-color: var(--clr-level-300); border-radius: 25px;} 
-.net {width: 80%; background-color: var(--clr-level-400); border-radius: 25px;} 
-.cplusplus {width: 45%; background-color: var(--clr-level-100); border-radius: 25px;}
-.angular {width: 60%; background-color: var(--clr-level-300); border-radius: 25px;} 
-.java {width: 50%; background-color: var(--clr-level-200); border-radius: 25px;}
-.python {width: 60%; background-color: var(--clr-level-300); border-radius: 25px;}
+.html {background-color: var(--clr-level-400); border-radius: 25px; }
+.css {background-color: var(--clr-level-200);  border-radius: 25px; }
+.js {background-color: var(--clr-level-300); border-radius: 25px;} 
+.net {background-color: var(--clr-level-400); border-radius: 25px;} 
+.cplusplus {background-color: var(--clr-level-100); border-radius: 25px;}
+.angular {background-color: var(--clr-level-300); border-radius: 25px;} 
+.java {background-color: var(--clr-level-200); border-radius: 25px;}
+.python {background-color: var(--clr-level-300); border-radius: 25px;}

@@ -87,12 +87,23 @@ function addItersectionObserver() {
 
         entries.forEach(entry => {
             if(entry.isIntersecting) {
+
                 if(entry.target.classList.contains('reset-animation')) {
                     entry.target.classList.remove('reset-animation');
+
                 }
-                entry.target.classList.add('play-animation');
+                // check if observable item is from skill-container
+                else if(entry.target.classList.contains('skill-level-loading') &&
+                    !entry.target.getAttribute('style')) {
+                    // extract written width
+                    var widthPercentage = entry.target.innerHTML;
+                    // add it
+                    entry.target.setAttribute('style', 'width: ' + widthPercentage + ';');
+                } else if(!entry.target.classList.contains('skill-level-loading')) {
+                    entry.target.classList.add('play-animation');
+                }
             
-            } else {
+            } else if(!entry.target.classList.contains('skill-level-loading')){
 
                 if(entry.target.classList.contains('play-animation')) {
                     entry.target.classList.remove('play-animation');
@@ -106,13 +117,11 @@ function addItersectionObserver() {
 }
 
 function startObservingElements(observer) {
-    
+
     if(observer != null) {
-        var x = document.querySelectorAll('.project');
-
-        for(var i = 0; i < x.length; i++) {
-
-            observer.observe(x[i]);
+        const all = document.querySelectorAll('.project, div.skills');
+        for(var i = 0; i < all.length; i++) {
+            observer.observe(all[i]);
         }
     }
 }
