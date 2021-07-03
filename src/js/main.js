@@ -1,8 +1,10 @@
 const navbar = document.getElementById("navbar");
 const navOffset = navbar.offsetTop;
 
+// const observer = addItersectionObserver();
+// startObservingElements(observer);
+
 bindToScroll();
-// addContactFormListeners();
 
 
 function bindToScroll() {
@@ -78,3 +80,23 @@ function isValidString(s) {
     }
     return true;
 }
+
+// function addItersectionObserver() {
+
+//     const observer = new IntersectionObserver(entries => {
+
+//         entries.forEach(entry => {
+//             entry.target.classList.add('project-spawn-animation');
+//             console.log('adding class to: ', entry);
+//         });
+//     }); 
+
+//     return observer;
+// }
+
+// function startObservingElements(observer) {
+    
+//     if(observer != null) {
+//         observer.observe(document.querySelector('.project'));
+//     }
+// }
