@@ -1,13 +1,14 @@
 :root {
-    --clr-level-100: lightsalmon;
-    --clr-level-200: coral;
-    --clr-level-300: #D2691E;
-    --clr-level-400: orangered;
+    --clr-level-000: #101010;
+    --clr-level-100: #dbc465;
+    --clr-level-200: #dba73d;
+    --clr-level-300: #bf7a24;
+    --clr-level-400: #e87715;
 }
 
 .skill-container {
     width: 100%;
-    background-color: #101010;
+    background-color: var(--clr-level-000);
     border-radius: 25px;
 }
 
