@@ -17,7 +17,7 @@
 }
 
 .reset-animation {
-    animation-play-state: initial;
+    animation-play-state: paused;
 }
 
 /* Project animation */
@@ -26,15 +26,19 @@
 }
 
 .project-spawn-animation {
-    transition: spawn-animation 2s ease-in;
+    animation: spawn-animation 2s ease-in;
 }
 
 @keyframes spawn-animation {
     0% {
-        transform: translateX(10%);
+        transform: translateX(-100%);
+    }
+
+    70% {
+        transform: translateX(2%);
     }
 
     100% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 }

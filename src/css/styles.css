@@ -175,6 +175,8 @@ body {
     padding: 1.5%;
     border-radius: 10px;
     padding-bottom: 5%;
+
+    animation: spawn-animation 1s ease-in forwards;
 }
 
 .project--right {

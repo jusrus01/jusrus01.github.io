@@ -1,8 +1,8 @@
 const navbar = document.getElementById("navbar");
 const navOffset = navbar.offsetTop;
 
-// const observer = addItersectionObserver();
-// startObservingElements(observer);
+const observer = addItersectionObserver();
+startObservingElements(observer);
 
 bindToScroll();
 
@@ -81,22 +81,38 @@ function isValidString(s) {
     return true;
 }
 
-// function addItersectionObserver() {
+function addItersectionObserver() {
 
-//     const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
 
-//         entries.forEach(entry => {
-//             entry.target.classList.add('project-spawn-animation');
-//             console.log('adding class to: ', entry);
-//         });
-//     }); 
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                if(entry.target.classList.contains('reset-animation')) {
+                    entry.target.classList.remove('reset-animation');
+                }
+                entry.target.classList.add('play-animation');
+            
+            } else {
 
-//     return observer;
-// }
+                if(entry.target.classList.contains('play-animation')) {
+                    entry.target.classList.remove('play-animation');
+                }
+                entry.target.classList.add('reset-animation');
+            }
+        });
+    }); 
 
-// function startObservingElements(observer) {
+    return observer;
+}
+
+function startObservingElements(observer) {
     
-//     if(observer != null) {
-//         observer.observe(document.querySelector('.project'));
-//     }
-// }
+    if(observer != null) {
+        var x = document.querySelectorAll('.project');
+
+        for(var i = 0; i < x.length; i++) {
+
+            observer.observe(x[i]);
+        }
+    }
+}
