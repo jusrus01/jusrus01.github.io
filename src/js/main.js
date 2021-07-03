@@ -119,7 +119,7 @@ function addItersectionObserver() {
 function startObservingElements(observer) {
 
     if(observer != null) {
-        const all = document.querySelectorAll('.project, div.skills, .about-me');
+        const all = document.querySelectorAll('.project, div.skills, .about-me, .contact');
         for(var i = 0; i < all.length; i++) {
             observer.observe(all[i]);
         }

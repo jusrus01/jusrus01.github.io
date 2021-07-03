@@ -195,6 +195,11 @@ body {
 }
 
 /* Contact section styles */
+
+.contact {
+    animation: simple-fade 2s ease-in-out;
+}
+
 input, select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
