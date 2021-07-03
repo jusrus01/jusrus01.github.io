@@ -93,6 +93,11 @@ body {
     padding: 0 5%;
 }
 
+.introduction-section h1 {
+    margin: 0;
+    font-size: 4rem;
+}
+
 .bg-image {
     position: absolute;
     width: 100%;
@@ -178,7 +183,8 @@ body {
 }
 
 .project:hover {
-    background-color: #202020;
+    background-color: #070606;
+    transform: translateX(1%);
 }
 
 .project p {
