@@ -1,6 +1,10 @@
 const navbar = document.getElementById("navbar");
 const navOffset = navbar.offsetTop;
 
+// keeping track of currently expanded project details
+var viewingProject;
+var clickedDetailsBtn;
+
 const observer = addItersectionObserver();
 startObservingElements(observer);
 
@@ -124,4 +128,40 @@ function startObservingElements(observer) {
             observer.observe(all[i]);
         }
     }
+}
+
+function showDetails(btn, id) {
+    var projectDetails;
+
+    if(viewingProject == null) {
+        viewingProject = id;
+        clickedDetailsBtn = btn;
+    } else {
+
+        projectDetails = document.getElementById(viewingProject);
+
+        if(viewingProject == id && projectDetails.className == 'hidden') {
+            projectDetails.classList.add('details-container');
+            clickedDetailsBtn.setAttribute('style', 'background-color: white; color: black;');
+            return;
+        }
+        // close project details before assignment
+        projectDetails = document.getElementById(viewingProject);
+        projectDetails.className = 'hidden';
+
+        clickedDetailsBtn.setAttribute('style', null);
+        
+        // assign new viewing project
+        if(viewingProject == id) {
+            return;
+        }
+
+        viewingProject = id;
+        clickedDetailsBtn = btn;
+    }
+
+    projectDetails = document.getElementById(viewingProject);
+    projectDetails.classList.add('details-container');
+    
+    clickedDetailsBtn.setAttribute('style', 'background-color: white; color: black;');
 }
