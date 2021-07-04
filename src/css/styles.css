@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: roboto-regular;
+    src: url(../../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(../../assets/fonts/Roboto-Bold.ttf);
+}
+
 html, body {
     margin: 0;
     height: 100%;
@@ -12,7 +22,7 @@ html, body {
 body {
     background-color: black;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: roboto-regular, Arial, Helvetica, sans-serif;
 }
 
 /* Navigation bar styles */
@@ -106,8 +116,9 @@ body {
 }
 
 .introduction-section h1 {
-    margin: 0;
+    font-family: roboto-bold;
     font-size: 4rem;
+    margin: 0;
 }
 
 .bg-image {
