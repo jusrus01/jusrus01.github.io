@@ -174,16 +174,19 @@ body {
 /* Projects section styles*/
 .project {
     background-color: #101010;
-    padding: 1.5%;
+    padding: 1%;
+    margin-top: 2%;
     border-radius: 10px;
-    padding-bottom: 5%;
-
+    padding-bottom: 60px;
     animation: spawn-animation 1.5s ease-in forwards;
 }
 
 .project--right {
     text-align: right;
-    margin-top: auto;
+}
+
+.project--left {
+    text-align: left;
 }
 
 .project:hover {
@@ -224,20 +227,33 @@ input, select, textarea {
     cursor: pointer;
     width: 10%;
 }
+
+.btn--right {
+    margin-left: auto;
+}
   
   /* When moving the mouse over the submit button, add a darker green color */
 .btn:hover {
     background-color: #45a049;
 }
 
-.sendBtn {
-    width: 10%;
-    min-width: 70px;
+.git-btn {
+    float: right;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
 }
 
-.gitBtn {
+.details-btn {
+    float: left;
     text-decoration: none;
-    width: 9%;
+    width: 90px;
+    text-align: center;
+}
+
+.send-btn {
+    width: 10%;
+    min-width: 70px;
 }
 
 /* Footer */
