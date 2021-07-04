@@ -221,6 +221,11 @@ body {
     max-width: 80%
 }
 
+.tech-text {
+    font-style: italic;
+    color: lightgray;
+}
+
 /* Contact section styles */
 
 .contact {

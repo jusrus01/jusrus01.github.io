@@ -30,7 +30,7 @@
 }
   
 .html {background-color: var(--clr-level-400); border-radius: 25px; }
-.css {background-color: var(--clr-level-200);  border-radius: 25px; }
+.css {background-color: var(--clr-level-300);  border-radius: 25px; }
 .js {background-color: var(--clr-level-300); border-radius: 25px;} 
 .net {background-color: var(--clr-level-400); border-radius: 25px;} 
 .cplusplus {background-color: var(--clr-level-100); border-radius: 25px;}
