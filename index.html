@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="src/css/styles.css">
         <link rel="stylesheet" href="src/css/animations.css">
         <link rel="stylesheet" href="src/css/levels.css">
+
+        <script src="https://kit.fontawesome.com/b115137311.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -26,13 +28,13 @@
         <!-- Navigation bar -->
         <section>
             <div class="navbar" id="navbar">
-                <a class="nav-logo" style="border: none;" href="#">&#9786;</a>
+                <a class="nav-logo" style="border: none;" href="#"><i class="far fa-smile"></i></a>
                 <a class="nav-contact" href="#contact" onclick="closeNavbarItems()">Contact</a>
                 <a class="nav-contact" href="#projects" onclick="closeNavbarItems()">Projects</a>
                 <a class="nav-contact" href="#skills" onclick="closeNavbarItems()">Skills</a>
                 <a class="nav-contact" href="#about-me" onclick="closeNavbarItems()">About me</a>
                 <a href="javascript:void(0);" class="icon" onclick="showNavbarItems()">
-                    <i>Hidden</i>
+                    <i class="fas fa-plus"></i>
                 </a>
             </div>
         </section>
@@ -40,7 +42,7 @@
         <div class="container">
             <!-- About me -->
             <section id="about-me">
-                <h2>About me</h2>
+                <h2>About me <i class="fas fa-book"></i></h2>
                 <div class="about-me">
                     <div class="split">
                         <div class="profile-image--center">
@@ -61,7 +63,7 @@
             <!-- Skills -->
             <section id="skills">
                 <div class="skills-container">
-                    <h2>Skills</h2>
+                    <h2>Skills <i class="fas fa-code"></i></h2>
                     
                     <div class="split">
                         <div>
@@ -112,14 +114,14 @@
 
             <!-- Projects -->
             <section id="projects">
-                <h2>Projects</h2>
+                <h2>Projects <i class="fas fa-folder-open"></i></h2>
 
                 <div class="project">
                     <h3>Web application to store movies</h3>
                     <p>Simple web application to store and rate movies using RESTful API and JWT token authentication.</p>
                     <p class="tech-text">Used: .NET Core 5, Angular, Microsoft SQL Server</p>
                     <a class="btn-outline details-btn" href="javascript:void(0);" onclick="showDetails(this, 'movie-app')">Details</a>
-                    <a class="btn-outline git-btn" href="https://github.com/jusrus01/PersonalMovieList" target="_blank">View in GitHub</a>
+                    <a class="btn-outline git-btn" href="https://github.com/jusrus01/PersonalMovieList" target="_blank">View in GitHub <i class="fab fa-github"></i> </a>
                 </div>
                 <div class="hidden" id="movie-app">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
@@ -135,7 +137,7 @@
                     <p>Simple chat room web application to learn how web socket programming works in .NET Core.</p>
                     <p class="tech-text">Used: Javascript, HTML, CSS, .NET Core</p>
                     <a class="btn-outline details-btn" href="javascript:void(0);" onclick="showDetails(this, 'chat-app')">Details</a>
-                    <a class="btn-outline git-btn" href="https://github.com/jusrus01/ChatRoomNetCoreWebSockets" target="_blank">View in GitHub</a>
+                    <a class="btn-outline git-btn" href="https://github.com/jusrus01/ChatRoomNetCoreWebSockets" target="_blank">View in GitHub <i class="fab fa-github"></i> </a>
                 </div>
                 <div class="hidden" id="chat-app">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
@@ -151,7 +153,7 @@
                     <p>WPF application to store video files and keep track of each video watched time with the help of LibVLCSharp.</p>
                     <p class="tech-text">Used: .NET Framework</p>
                     <a class="btn-outline details-btn" href="javascript:void(0);" onclick="showDetails(this, 'video-app')">Details</a>
-                    <a class="btn-outline git-btn" href="https://github.com/jusrus01/VideoTracker-v2" target="_blank">View in GitHub</a>
+                    <a class="btn-outline git-btn" href="https://github.com/jusrus01/VideoTracker-v2" target="_blank">View in GitHub <i class="fab fa-github"></i> </a>
                 </div>
                 <div class="hidden" id="video-app">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
@@ -168,14 +170,14 @@
             <!-- Contact -->
             <section id="contact">
                 <div class="contact">
-                    <h2>Contact</h2>
+                    <h2>Contact <i class="fas fa-envelope"></i></h2>
                 
                     <label>Subject</label>
                     <input type="text" name="subject" id="subject" maxlength="100">
                         
                     <label>Message</label>
                     <textarea type="text" name="body" id="messageBody" maxlength="3000"></textarea>
-                    <input class="btn-outline send-btn" type="submit" value="Send" id="contactBtn" onclick="openMail()"/>
+                    <button class="btn-outline send-btn" type="submit" id="contactBtn" onclick="openMail()">Send<i class="fas fa-paper-plane"></i></button>
                 </div>
             </section>
         </div>
