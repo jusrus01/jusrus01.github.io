@@ -332,13 +332,3 @@ input, select, textarea {
       margin-left: 2em;
     }
 }
-
-.hidden {
-    display: none;
-}
-
-.details-container {
-    display: flex;
-}
-
-/* Icons */
